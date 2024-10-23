@@ -2,10 +2,18 @@ public class Main {
     public static void main(String[] args) {
         //Задание 1
         int clientOS = 0;
-        System.out.printf(String.format("Установите версию приложения %s по ссылке\n", (clientOS == 0 ? "IOS" : "Android")));
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
         //Задание 2
-        int clientDeviceYear = 2015;
-        System.out.printf(String.format("Установите%s версию приложения для %s по ссылке\n", (clientDeviceYear < 2015 ? " облегченную" : ""), (clientOS == 0 ? "IOS" : "Android")));
+        int clientDeviceYear = 2013;
+        if (clientDeviceYear < 2015) {
+            System.out.printf("Установите облегченную версию приложения для %s по ссылке\n", (clientOS == 0 ? "IOS" : "Android"));
+        } else {
+            System.out.printf("Установите обычную версию приложения для %s по ссылке\n", (clientOS == 0 ? "IOS" : "Android"));
+        }
         //Задание 3
         int year = 1603;
         if ((year > 1584) && (year % 4 == 0) && (year % 100 != 0 || year % 400 == 0)) {
@@ -21,8 +29,8 @@ public class Main {
             System.out.printf("Потребуется дней: 3\n");
         } else System.out.printf("Доставки нет\n");
         //Задание 5
-        int mountNumber = 2;
-        switch (mountNumber) {
+        int monthNumber = 2;
+        switch (monthNumber) {
             case 1:
                 System.out.printf("Январь пренадлежит к сезону зима");
                 break;
